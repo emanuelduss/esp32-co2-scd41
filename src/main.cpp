@@ -7,7 +7,7 @@
 #include <WiFi.h>
 #include <Wire.h>
 
-#include "settings-livingroom.h"
+#include "settings.h"
 
 // Use proper definition of NO_ERROR
 #ifdef NO_ERROR
