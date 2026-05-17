@@ -1,0 +1,26 @@
+http:
+
+  middlewares:
+    security-headers:
+      headers:
+        customResponseHeaders:
+          Server: ""
+          X-Powered-By: ""
+        stsSeconds: 63072000
+        stsIncludeSubdomains: true
+        frameDeny: true
+        contentTypeNosniff: true
+        browserXssFilter: true
+        referrerPolicy: strict-origin-when-cross-origin
+
+tls:
+  options:
+    default:
+      sniStrict: true
+      preferServerCipherSuites: true
+      minVersion: "VersionTLS12"
+      cipherSuites:
+        - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305
+        - TLS_AES_256_GCM_SHA384
+        - TLS_CHACHA20_POLY1305_SHA256

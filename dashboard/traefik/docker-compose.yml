@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  traefik:
+    image: traefik:latest
+    hostname: traefik
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      TZ: 'Europe/Zurich'
+    networks:
+      - traefik
+    volumes:
+      - ./acme.json:/etc/traefik/acme.json
+      - ./letsencrypt:/etc/letsencrypt
+      - ./traefik.yml:/etc/traefik/traefik.yml
+      - ./config:/etc/traefik/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+networks:
+  traefik:
+    external: true
