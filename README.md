@@ -5,15 +5,29 @@
 - Microcontroller: ESP32
 - CO₂ Sensor: [Sensirion SCD-41](https://sensirion.com/products/catalog/SCD41)
 
+Hardware:
+
+![ESP32 and SCD-41 CO2 Sensor](.assets/hardware.png)
+
 ## Features
 
 - Provide Prometheus metrics endpoint to visualize it in Grafana
 - Send values to MQTT topic (e.g. Mosquitto, integrated in Home Assistant)
 - Send MQTT Auto Discovery messages to automatically configure Home Assistant
 
+Home Assistant:
+
+![Home Assistant Sensors](.assets/ha-sensors.png)
+
+![Home Assistant Graph](.assets/ha-graph.png)
+
+Grafana Dashboard:
+
+![](.assets/grafana-dashboard.png)
+
 ## Description
 
-See https://emanuelduss.ch/posts/co2-measurement/.
+See blog post for more details: https://emanuelduss.ch/posts/co2-measurement/.
 
 ## Usage / Build
 
