@@ -1,0 +1,17 @@
+// Device
+const char* DEVICE_DESCRIPTION = "ESP32 SCD41 Bedroom Sensor";
+const char* DEVICE_NAME = "esp32-bedroom";
+
+// Wi-Fi
+const char* WIFI_SSID = "wifi-legacy";
+const char* WIFI_PASSWORD = "password";
+const char IPADDRESS[] =  {192, 168, 1, 10};
+
+// MQTT
+const char* MQTT_SERVER = "192.168.1.5";
+const int MQTT_PORT = 1883;
+const char* MQTT_USERNAME = "username";
+const char* MQTT_PASSWORD = "password";
+const char* MQTT_TOPIC = "esp32/bedroom";
+const int MQTT_PUBLISH_INTERVAL = 60; // Seconds
+const char* MQTT_AUTO_DISCOVER_TOPIC_PREFIX = "homeassistant";
